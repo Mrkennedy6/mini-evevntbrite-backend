@@ -7,6 +7,8 @@ export const registerSchema = z.object({
     email: z.string().email(),
     password: z.string().min(8).max(128),
     // Acepta role opcional, lo normaliza y lo pasa como undefined si no es válido
+    // mas rolees
+
     role: z.string()
         .transform(r => r?.trim().toLowerCase())
         .optional()
